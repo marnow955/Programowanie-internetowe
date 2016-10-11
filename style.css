@@ -1,0 +1,47 @@
+body
+{
+  background-color: #303030;
+  color: white;
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+}
+
+#container
+{
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#logo
+{
+  font-size: 40px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+p#signature
+{
+  margin: 0px;
+  font-family: 'Amatic SC', cursive;
+}
+
+#content
+{
+  padding: 40px;
+  margin-top: 30px;
+  background-color: #666;
+  text-align: justify;
+}
+
+.important
+{
+  font-size: 15px;
+}
+.important:before
+{
+  color: #7e0000;
+  content: "⚠";
+  margin-right: 5px;
+}
