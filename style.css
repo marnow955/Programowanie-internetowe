@@ -33,7 +33,7 @@ p#signature
   margin-top: 30px;
   background-color: #666;
   text-align: justify;
-  height: 400px;
+  min-height: 400px;
 }
 
 .important
@@ -61,6 +61,12 @@ ul > li > ol
 label
 {
   cursor: pointer;
+  color: black;
+}
+
+label:hover
+{
+  color: white;
 }
 
 /*Usuwa znaczek checkboxa a nie ol!*/
