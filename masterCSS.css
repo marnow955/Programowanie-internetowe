@@ -60,3 +60,44 @@ p.signature
   right: 130px;
   bottom: 30px;
 }
+
+.footer
+{
+  color: red;
+  font-size: 12px;
+  text-align: center;
+}
+
+.footer a
+{
+  margin: 0 10px 0 10px;
+}
+
+a:link
+{
+  color: black;
+  text-decoration: none;
+}
+
+a:visited
+{
+  color: black;
+  text-decoration: none;
+}
+
+a:hover
+{
+  color: white;
+}
+
+a:active
+{
+  color: black;
+  text-decoration: none;
+}
+
+a.validLink
+{
+  color: gray;
+  cursor: default;
+}

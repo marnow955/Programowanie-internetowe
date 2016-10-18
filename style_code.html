@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>style.css</title>
+
+    <script type="text/javascript" src="js/shCore.js"></script>
+    <script type="text/javascript" src="js/shBrushCss.js"></script>
+    <link href="css/shCoreRDark.css" rel="stylesheet" type="text/css" />
+    <link href="css/shThemeRDark.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+     SyntaxHighlighter.all()
+     </script>
+  </head>
+  <body style="margin:0;">
+    <script type="syntaxhighlighter" class="brush: css"><![CDATA[
+  /**
+   * SyntaxHighlighter
+   */
+   #logo
+   {
+     color: red;
+     font-size: 40px;
+     text-align: center;
+     font-weight: 700;
+     letter-spacing: 2px;
+   }
+
+   .important
+   {
+     font-size: 15px;
+   }
+   .important:before
+   {
+     color: #7e0000;
+     content: "⚠";
+     margin-right: 5px;
+   }
+
+   ul
+   {
+     list-style-type: none;
+   }
+
+   ul > li > ol
+   {
+     list-style-type: none;
+     display: none;
+   }
+
+   label
+   {
+     cursor: pointer;
+     color: black;
+   }
+
+   label:hover
+   {
+     color: white;
+   }
+
+   /*Usuwa znaczek checkboxa a nie ol!*/
+   input[type=checkbox]{
+     display: none;
+   }
+
+   input[type=checkbox]:checked ~ ol
+   {
+     display: block;
+   }
+
+
+]]></script>
+  </body>
+</html>
