@@ -1,0 +1,63 @@
+.signature
+{
+  color: red;
+  font-size: 26px;
+  padding: 3px;
+}
+
+.logo
+{
+  text-align: center;
+}
+
+.content
+{
+  overflow-x: auto;
+}
+
+
+table, th, td
+{
+  border: 1px solid black;
+}
+
+table
+{
+  border-collapse: collapse;
+  text-align: start;
+}
+
+th{
+  color: #CCC;
+}
+
+input[type="button"]
+{
+  margin: 0;
+  width: 100px;
+}
+
+th input[type="text"]
+{
+  width: 180px;
+  border: 0;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #666;
+  color: #CCC;
+  text-align: center;
+}
+
+td input[type="text"]
+{
+  width: 180px;
+  border: 1px solid #666;
+  font-size: 18px;
+  background-color: #666;
+  color: white;
+}
+
+td input[type="text"]:hover
+{
+  border: 1px solid #CCC;
+}

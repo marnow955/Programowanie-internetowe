@@ -41,7 +41,8 @@ label:hover
 }
 
 /*Usuwa znaczek checkboxa a nie ol!*/
-input[type=checkbox]{
+input[type=checkbox]
+{
   display: none;
 }
 
