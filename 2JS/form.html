@@ -11,12 +11,17 @@
 
     <link rel="stylesheet" href="../masterCSS.css" type="text/css" />
     <link rel="stylesheet" href="2JS_style.css" type="text/css" />
+    <script type="text/javascript" src="form.js"></script>
   </head>
   <body>
 
+    <p class="pisign">
+      Programowanie <br/>internetowe
+    </p>
+
       <!-- ########################### W3C Standard #################################### -->
       <p>
-        <a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fiem.pw.edu.pl%2F~noworolm%2F2JS%2Ftable_generator.html">
+        <a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fiem.pw.edu.pl%2F~noworolm%2F2JS%2Fform.html">
           <img class="html5valid" src="../HTML5_Logo_32.png" alt="Poprawny HTML!" />
         </a>
       </p>
@@ -33,7 +38,60 @@
         </div>
 
         <div class="content">
+          <form action="#" method="post" onsubmit="validate()">
 
+            Imię: <span class="star">*</span><br/>
+            <input type="text" id="imie" /><br/>
+            <p class="error" id="i_error">To pole jest wymagane!</p>
+
+            Nazwisko: <span class="star">*</span><br/>
+            <input type="text" id="nazwisko" /><br/>
+            <p class="error" id="n_error">To pole jest wymagane!</p>
+
+            Data urodzenia: <br/>
+            <input type="date" id="data" onchange="validData()" /><br/>
+            <p class="error" id="d_error">Błędna data!</p>
+
+            Pesel: <span class="star">*</span><br/>
+            <input type="text" id="pesel" maxlength="11"/><br/>
+            <p class="error" id="p_error">To pole jest wymagane!</p>
+
+            Wiek: <br/>
+            <input type="text" id="wiek" value="" disabled /><br/>
+
+            Płeć: <br/>
+            <select id="plec">
+              <option>Mężczyzna</option>
+              <option>Kobieta</option>
+            </select><br/>
+
+            Kierunek studiów: <span class="star">*</span><br/>
+            <input type="radio" name="kierunek" value="Informatyka" />Informatyka<br/>
+            <input type="radio" name="kierunek" value="Automatyka" />Automatyka<br/>
+            <input type="radio" name="kierunek" value="Robotyka" />Robotyka<br/>
+            <p class="error" id="k_error">To pole jest wymagane!</p>
+
+            <input type="file" id="plik" accept=".jpg, .tif, .png"><br/>
+            <p class="error" id="f_error">Niepoprawny format!</p>
+
+            Komentarz: <br/>
+            <textarea id="komentarz" rows="5" oninput="zlicz()"></textarea> <br/>
+            <span id="licznik"></span><br/>
+
+            <input type="checkbox" id="regulamin" />Akceptuję regulamin <span class="star">*</span><br/>
+            <p class="error" id="r_error">To pole jest wymagane!</p>
+
+            <span class="star">*</span><span class="starinfo">Pola oznaczone gwiązdką są wymagane!</span>
+            <input type="submit" value="Zarejestruj się" />
+          </form>
+        </div>
+
+        <div class="footer">
+          Linki do źródeł:
+          <a href="form_code.html">form.html</a>
+          <a href="form_js_code.html">form.js</a>
+          <a href="../masterCSS_code.html">masterCSS.css</a>
+          <a href="2JS_style_code.html">2JS_style.css</a>
         </div>
 
       </div>
