@@ -33,8 +33,10 @@
         <p class="signature">
           Generator tabeli
         </p>
-        <input type="number" id="numberSubmit" min="0" step="1" placeholder="0.."/>
-        <input type="submit" value="Generuj!" onclick="generuj()"/>
+        <form id="genForm" onsubmit="generuj()">
+          <input type="number" id="numberSubmit" min="0" step="1" placeholder="0.."/>
+          <input type="submit" value="Generuj!" />
+        </form>
       </div>
 
       <div class="content">
