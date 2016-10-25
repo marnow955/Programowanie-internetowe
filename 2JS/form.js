@@ -120,7 +120,6 @@ function validPlik() {
   var fName = document.getElementById('plik').value;
   var e = document.getElementById('f_error');
   fName = fName.substring(fName.lastIndexOf("."),fName.length);
-  alert(fName);
   if (fName!="" && fName!=".jpg" && fName!=".png" && fName!=".tif") {
     e.style.display = "block";
     return false;
