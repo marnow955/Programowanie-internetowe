@@ -55,7 +55,7 @@
            <p class="signature">
              Generator tabeli
            </p>
-           <form id="genForm" onsubmit="generuj()">
+           <form id="genForm" onsubmit="event.preventDefault(); generuj();">
              <input type="number" id="numberSubmit" min="0" step="1" placeholder="0.."/>
              <input type="submit" value="Generuj!" />
            </form>
