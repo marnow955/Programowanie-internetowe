@@ -19,7 +19,7 @@
   /**
    * SyntaxHighlighter
    */
-   function validate() {
+   function validate(event) {
      var isImie = validImie();
      var isNazwisko = validNazwisko();
      var isPesel = validPesel();
@@ -29,7 +29,7 @@
      if (isImie==true && isNazwisko==true && isPesel==true && isKierunek==true && isRegulamin==true && isPlik==true) {
        return true;
      } else {
-       return event.preventDefault();
+       return event.preventDefault(event);
      }
    }
 

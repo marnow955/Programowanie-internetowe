@@ -6,6 +6,7 @@ function validate(event) {
   var isRegulamin = validRegulamin();
   var isPlik = validPlik();
   if (isImie==true && isNazwisko==true && isPesel==true && isKierunek==true && isRegulamin==true && isPlik==true) {
+    document.getElementById('wiek').disabled = false;
     return true;
   } else {
     return event.preventDefault(event);

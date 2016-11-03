@@ -1,0 +1,134 @@
+.signature
+{
+  color: red;
+  font-size: 32px;
+  padding: 3px;
+}
+
+.logo
+{
+  text-align: center;
+}
+
+form
+{
+  font-size: 15px;
+  color: #CCC;
+  width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+}
+form input
+{
+  padding: 3px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+form input[type="text"]
+{
+  width: 100%;
+}
+form input[type="date"]
+{
+  width: 100%;
+  height: 15px;
+}
+form select
+{
+  padding: 3px;
+  width: 230px;
+}
+form textarea
+{
+  width: 100%;
+}
+
+
+p.pisign
+{
+  color: red;
+  font-family: 'Amatic SC', cursive;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+}
+
+.etykiety
+{
+  color: #CCC;
+  margin: 0px;
+  font-size: 15px;
+  float: left;
+}
+
+.inputs
+{
+  margin: 0px;
+  float: left;
+  margin-left: 6px;
+  font-size: 15px;
+}
+
+#licznik
+{
+  font-size: 12px;
+}
+
+#licznik:before
+{
+  content: "Znaków: "
+}
+
+.star
+{
+  color: #7e0000
+}
+.starinfo
+{
+  font-size: 10px;
+}
+
+.error
+{
+  display: none;
+  margin: 0;
+  font-size: 11px;
+  color: #7e0000;
+}
+
+a.logoutB
+{
+  margin: 0 0 5px auto;
+  font-size: 15px;
+  display: block;
+  width: 100px;
+  height: 20px;
+  background-color: #4E9CAF;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  color: #CCC;
+}
+
+a.logoutB:hover
+{
+  background-color: #5F9FAF;
+}
+
+table
+{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table tr td:first-child
+{
+  color: #CCC;
+}
+
+table tr td:nth-child(2)
+{
+  word-wrap: break-word;
+  width: 600px;
+  max-width: 600px;
+}
