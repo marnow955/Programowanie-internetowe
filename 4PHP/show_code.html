@@ -61,9 +61,9 @@
                    $licznik = 1;
                    foreach ($pliki as $plik) {
                      if ($plik!='.' && $plik!='..') {
-                       $split = explode('.',$plik);
+                       $info = pathinfo($plik);
                        $size = filesize($katalog.'/'.$plik);
-                       echo '<tr><td>'.$licznik.'</td><td><a href="download.php?plik='.$plik.'">'.$split[0].'</a></td><td>'.$split[1].'</td><td>'.$size.'B</td></tr>';
+                       echo '<tr><td>'.$licznik.'</td><td><a href="download.php?plik='.$plik.'">'.$info['filename'].'</a></td><td>'.$info['extension'].'</td><td>'.$size.'B</td></tr>';
                        $licznik++;
                      }
                    }
