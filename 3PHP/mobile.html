@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Strona responsywna</title>
+    <meta name="author" content="Marek Noworolnik"/>
+    <meta name="description" content="Programowanie internetowe - strona mobilna, responsywna" />
+    <meta name="keywords" content="Programowanie internetowe, www, Marek Noworolnik, strona mobilna, responsywność" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="mobile_style.css" type="text/css" />
+
+    <link rel="stylesheet" href="SlickNav/slicknav.css" />
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  </head>
+  <body>
+
+    <div class="container">
+
+      <div class="logo">
+        <p class="signature">Strona responsywna</p>
+      </div>
+
+      <div class="box">
+        <div class="menuBox">
+          <ul id="menu">
+            <li><a href="#">Strona Główna</a></li>
+            <li><a href="#">Link1</a></li>
+            <li><a href="#">Link2</a></li>
+            <li><a href="#">Link3</a></li>
+            <li><a href="#">Link4</a></li>
+            <li><a href="#">Link5</a></li>
+          </ul>
+        </div>
+
+        <div class="content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis leo turpis, venenatis ac iaculis eget, elementum nec est. Nullam rutrum massa sem, eget fermentum velit commodo at. Nam ipsum mauris, fermentum ac aliquam vel, rutrum in risus. Donec vel augue finibus, efficitur mi in, pulvinar nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec rutrum et urna eu euismod. Aenean sagittis tristique rhoncus. Morbi a sapien et mauris euismod luctus. Proin ac est elit. Morbi ac lacus sit amet justo consectetur venenatis. Nam lacinia venenatis odio, et consequat massa ultricies a. Fusce sodales, arcu eget congue viverra, est nisi sodales neque, eu placerat lacus purus eu quam.<br/><br/>
+
+          Pellentesque et massa tincidunt, pellentesque mi vel, placerat neque. Mauris risus ligula, pulvinar in purus ac, ultrices mattis lectus. Sed eu urna tellus. Nam mauris dui, tristique nec pellentesque at, laoreet eget quam. Aenean ipsum arcu, egestas non fermentum at, sollicitudin sed ipsum. Morbi erat nibh, suscipit non imperdiet sit amet, placerat vel ligula. Aliquam vel placerat mi. Ut et erat nunc. Nullam viverra viverra nunc sed commodo. Donec facilisis eros sed fringilla imperdiet. Praesent eget dictum velit. Praesent convallis ullamcorper ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce et efficitur turpis.<br/><br/>
+
+          Nam vel ex ornare, congue leo in, suscipit justo. Quisque vel augue sollicitudin arcu venenatis luctus. Nulla tortor metus, gravida vitae quam eget, mollis sodales odio. Suspendisse vel varius risus. Etiam porta sollicitudin metus eu aliquam. Phasellus eu ipsum dui. Vivamus sed purus nisl. Maecenas consectetur, mi tempor dapibus placerat, lorem libero volutpat dolor, eu scelerisque leo lectus sit amet sapien. Vivamus ipsum metus, hendrerit at pulvinar semper, sodales et neque. Pellentesque rhoncus libero nunc, quis consequat augue efficitur vitae. Aenean efficitur posuere placerat. Mauris lobortis gravida purus, in convallis nunc maximus eget. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent eget mauris et augue finibus efficitur quis blandit nisi. Donec et mi magna.<br/><br/>
+        </div>
+        <div style="clear: both"></div>
+
+      </div>
+
+      <div class="footer">
+        Linki do źródeł:
+        <a href="mobile_code.html">mobile.html</a>
+        <a href="mobile_style_code.html">mobile_style.css</a>
+      </div>
+
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="SlickNav/jquery.slicknav.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+          $('#menu').slicknav({
+            prependTo:'.box'
+          });
+      });
+    </script>
+  </body>
+</html>
