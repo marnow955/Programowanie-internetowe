@@ -1,0 +1,50 @@
+.logo
+{
+  color: red;
+  font-size: 40px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 20px;
+}
+
+table, th, td
+{
+  border: 1px solid black;
+}
+
+table
+{
+  border-collapse: collapse;
+  text-align: start;
+  width: 100%;
+}
+
+th{
+  color: #CCC;
+}
+
+th:first-child
+{
+  width: 40px;
+}
+
+th:nth-child(3)
+{
+  width: 80px;
+}
+
+th:nth-child(4)
+{
+  width: 160px;
+}
+
+form
+{
+  margin: 10px 0 0 40px;
+}
+
+form input
+{
+  margin: 5px 0 5px 0;
+}

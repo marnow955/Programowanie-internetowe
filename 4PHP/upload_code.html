@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>upload_code.html</title>
+
+    <script type="text/javascript" src="../js/shCore.js"></script>
+    <script type="text/javascript" src="../js/shBrushPhp.js"></script>
+    <link href="../css/shCoreRDark.css" rel="stylesheet" type="text/css" />
+    <link href="../css/shThemeRDark.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+     SyntaxHighlighter.all()
+     </script>
+  </head>
+  <body style="margin:0;">
+    <script type="syntaxhighlighter" class="brush: php"><![CDATA[
+  /**
+   * SyntaxHighlighter
+   */
+   <?php
+
+     while (list($indeks,$plik) = each($_FILES[pliki][name])) {
+       $gdzie = "upload/$plik";
+       copy($_FILES[pliki][tmp_name][$indeks],$gdzie);
+     }
+     header('Location: show.php');
+    ?>
+
+
+
+
+]]></script>
+  </body>
+</html>
