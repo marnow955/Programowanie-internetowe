@@ -1,0 +1,51 @@
+form input[type=text]
+{
+  height: 20px;
+  width: 100%;
+  background-color: #EFEFEF;
+  color: #666;
+  border: 2px solid #DDD;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  outline: none;
+  margin-top: 10px;
+}
+
+#searchSuggest
+{
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  background-color: #555;
+  border: 2px solid #DDD;
+  border-top: none;
+  border-radius: 0 0 7px 7px;
+  visibility: hidden;
+}
+
+.suggest
+{
+  color: black;
+  border-radius: 7px;
+  padding: 2px 10px 2px 10px;
+}
+
+.suggest:hover
+{
+  background-color: #777;
+  color: white;
+  cursor:pointer;
+}
+
+table
+{
+  margin: 20px;
+}
+
+table tr td:first-child
+{
+  color: #CCC;
+  padding-right: 20px;
+}

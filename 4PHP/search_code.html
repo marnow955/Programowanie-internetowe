@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>search_code.html</title>
+
+    <script type="text/javascript" src="../js/shCore.js"></script>
+    <script type="text/javascript" src="../js/shBrushPhp.js"></script>
+    <link href="../css/shCoreRDark.css" rel="stylesheet" type="text/css" />
+    <link href="../css/shThemeRDark.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+     SyntaxHighlighter.all()
+     </script>
+  </head>
+  <body style="margin:0;">
+    <script type="syntaxhighlighter" class="brush: php"><![CDATA[
+  /**
+   * SyntaxHighlighter
+   */
+   <?php
+     require_once "connect.php";
+
+     if($polaczenie->connect_errno!=0)
+     {
+       echo "Error: ".$polaczenie->connect_errno;
+     }
+     else
+     {
+       $search = $_POST['search'];
+       $zapytanie = "SELECT login FROM uzytkownicy WHERE login LIKE '%$search%' LIMIT 10";
+       $wynik = $polaczenie->query($zapytanie);
+       $ile_znalezionych = $wynik->num_rows;
+       $str = "";
+       for ($i=0; $i <$ile_znalezionych; $i++){
+         $wiersz = $wynik->fetch_assoc();
+         $str .= $wiersz['login']."\n";
+       }
+       // ucina białe znaki z końca str
+       echo rtrim($str);
+     }
+    ?>
+
+
+
+
+]]></script>
+  </body>
+</html>
