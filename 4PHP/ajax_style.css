@@ -49,3 +49,16 @@ table tr td:first-child
   color: #CCC;
   padding-right: 20px;
 }
+
+.content
+{
+  position: relative;
+}
+#frame
+{
+  width: 100px;
+  height: 100px;
+  top: 360px;
+  background-color: green;
+  position: absolute;
+}

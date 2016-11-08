@@ -14,6 +14,7 @@
 
     <script type="text/javascript" src="prototype.js"></script>
     <script type="text/javascript" src="suggest.js"></script>
+
   </head>
   <body>
 
@@ -23,8 +24,6 @@
         <form autocomplete="off" action="" method="post">
           <input autocomplete="false" name="hidden" type="text" style="display:none;">
           <input type="text" id="searchinput" name="searchinput" placeholder="Wyszukaj..." onkeyup="suggest()" />
-          <input type="text" id="imie" hidden="hidden" />
-          <input type="text" id="nazwisko" hidden="hidden" />
 
           <div id="searchSuggest">
           </div>
@@ -36,6 +35,25 @@
         <p>
           Problemy z SQL, działająca wersja: <a href="http://marnow955-test.ugu.pl/4PHP/ajax.php">http://marnow955-test.ugu.pl/4PHP/ajax.php</a>
         </p>
+
+        <div id="frame">
+        </div>
+        <script type="text/javascript">
+        var frame = document.querySelector("#frame");
+        var x = 40;
+        var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+
+        function move() {
+            x++;
+            frame.style.left = x + "px";
+
+            if(x>680){
+              x = 40;
+            }
+          requestAnimationFrame(move);
+        }
+        move();
+        </script>
 
       </div>
 

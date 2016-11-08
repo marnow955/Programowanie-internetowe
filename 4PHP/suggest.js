@@ -1,5 +1,5 @@
 function suggest() {
-  var searchstr = escape(document.getElementById('searchinput').value);
+  var searchstr = document.getElementById('searchinput').value;
   var myAjax = new Ajax.Request(
         'search.php',
         {
