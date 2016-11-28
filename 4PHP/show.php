@@ -14,6 +14,17 @@
 
   </head>
   <body>
+    <!-- ########################### W3C Standard #################################### -->
+    <p>
+      <a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fiem.pw.edu.pl%2F~noworolm%2F4PHP%2Fshow.php">
+        <img class="html5valid" src="../HTML5_Logo_32.png" alt="Poprawny HTML!" />
+      </a>
+    </p>
+    <p>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img class="css3valid" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Poprawny CSS!" />
+      </a>
+    </p>
 
     <div class="container">
 

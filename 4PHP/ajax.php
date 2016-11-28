@@ -17,13 +17,43 @@
 
   </head>
   <body>
+    <!-- ########################### W3C Standard #################################### -->
+    <p>
+      <a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fiem.pw.edu.pl%2F~noworolm%2F4PHP%2Fajax.php">
+        <img class="html5valid" src="../HTML5_Logo_32.png" alt="Poprawny HTML!" />
+      </a>
+    </p>
+    <p>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img class="css3valid" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Poprawny CSS!" />
+      </a>
+    </p>
 
     <div class="container">
       <div class="content">
 
-        <form autocomplete="off" action="" method="post">
-          <input autocomplete="false" name="hidden" type="text" style="display:none;">
-          <input type="text" id="searchinput" name="searchinput" placeholder="Wyszukaj..." onkeyup="suggest()" />
+        <div class="buttons">
+          <span>
+            <input type="radio" name="method" value="get" id="get" />
+            <label for="get">GET</label>
+          </span>
+          <span>
+            <input type="radio" name="method" value="post" id="post" />
+            <label for="post">POST</label>
+          </span>
+          <span>
+            <input type="radio" name="method" value="aget" id="aget" />
+            <label for="aget">AJAX+GET</label>
+          </span>
+          <span>
+            <input type="radio" name="method" value="apost" id="apost" checked />
+            <label for="apost">AJAX+POST</label>
+          </span>
+        </div>
+
+        <form autocomplete="off" method="post">
+          <input name="hidden" type="text" style="display:none;">
+          <input type="text" id="searchinput" name="searchinput" placeholder="Wyszukaj..." onkeyup="selectSuggest()" />
 
           <div id="searchSuggest">
           </div>

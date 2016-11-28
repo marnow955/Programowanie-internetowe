@@ -1,0 +1,119 @@
+.logo
+{
+  color: red;
+  font-size: 40px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.container
+{
+  width: 100%;
+}
+
+.content
+{
+  color: black;
+  float: left;
+  width: 40%;
+  padding: 0;
+  min-height: 480px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 5px 0px 33px 9px rgba(0,0,0,0.59);
+-moz-box-shadow: 5px 0px 33px 9px rgba(0,0,0,0.59);
+box-shadow: 5px 0px 33px 9px rgba(0,0,0,0.59);
+}
+
+.leftPanel
+{
+  float: left;
+  margin-top: 30px;
+  min-height: 450px;
+  background-color: #505050;
+  width: 20%;
+  margin-left: 10%;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.rightPanel
+{
+  float: left;
+  color: #FFF;
+  margin-top: 30px;
+  min-height: 480px;
+  max-height: 480px;
+  background-color: #6F6F6F;
+  width: 25%;
+  max-width: 25%;
+  word-break:break-all;
+  overflow-y: auto;
+}
+
+#total
+{
+  padding: 10px;
+  color: black;
+  font-family: Roboto;
+  font-weight: 100;
+}
+
+#map
+{
+  height: 480px;
+  width: 100%;
+}
+
+input[type=text]
+{
+  height: 15px;
+  width: 80%;
+  background-color: #EFEFEF;
+  color: #666;
+  border: 2px solid #DDD;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  outline: none;
+  margin: 10px;
+}
+
+select
+{
+  height: 20px;
+  width: 80%;
+  background-color: #EFEFEF;
+  border-radius: 5px;
+  outline: none;
+}
+
+input[type=submit]
+{
+  height: 25px;
+  width: 80%;
+  cursor: pointer;
+  border: 0;
+  border-radius: 5px;
+  outline: none;
+  margin: 10px;
+}
+input[type=submit]:hover
+{
+  background-color: #CCC;
+}
+input[type=submit]:active
+{
+  background-color: #BBB;
+}
+
+.html5valid
+{
+  bottom: 20px;
+}
+
+.css3valid
+{
+  bottom: 20px;
+}

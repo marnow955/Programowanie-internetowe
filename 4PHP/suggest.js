@@ -1,9 +1,27 @@
-function suggest() {
+function selectSuggest() {
+  var method = document.getElementsByName('method');
+  for(i=0; i<method.length; i++){
+    if(method[i].checked == true){
+      if (method[i].value=='apost') {
+        suggest('post',true);
+      } else if (method[i].value=='post') {
+        suggest('post',false);
+      } else if (method[i].value=='aget') {
+        suggest('get',true);
+      } else if (method[i].value=='get') {
+        suggest('get',false);
+      }
+    }
+  }
+}
+
+function suggest(text,asyncv) {
   var searchstr = document.getElementById('searchinput').value;
   var myAjax = new Ajax.Request(
         'search.php',
         {
-         method: 'post',
+         method: text,
+         asynchronous: asyncv,
          parameters: "search=" + searchstr,
          onComplete: showSuggest,
          onFailure: showAlert
@@ -16,7 +34,7 @@ function showSuggest(text) {
   searchSuggest.innerHTML='';
   var wyniki = text.responseText.split("\n");
   for(i=0; i < wyniki.length; i++){
-    var suggest = '<div class="suggest" onclick="javascript:setSearch(this.innerHTML);" >';
+    var suggest = '<div class="suggest" onclick="javascript:selectSetSearch(this.innerHTML);" >';
     suggest += wyniki[i] + '</div>';
     searchSuggest.innerHTML += suggest;
   }
@@ -26,7 +44,24 @@ function showAlert(MyRequest) {
   alert("Operacja nie powiodła się");
 }
 
-function setSearch(value) {
+function selectSetSearch(value) {
+  var method = document.getElementsByName('method');
+  for(i=0; i<method.length; i++){
+    if(method[i].checked == true){
+      if (method[i].value=='apost') {
+        setSearch(value,'post',true);
+      } else if (method[i].value=='post') {
+        setSearch(value,'post',false);
+      } else if (method[i].value=='aget') {
+        setSearch(value,'get',true);
+      } else if (method[i].value=='get') {
+        setSearch(value,'get',false);
+      }
+    }
+  }
+}
+
+function setSearch(value,text,asyncv) {
   var searchSuggest = document.getElementById("searchSuggest");
   searchSuggest.style.visibility = "hidden";
   document.getElementById('searchinput').value = value;
@@ -35,7 +70,8 @@ function setSearch(value) {
   var secondAjax = new Ajax.Request(
         'search_data.php',
         {
-         method: 'post',
+         method: text,
+         asynchronous: asyncv,
          parameters: "login=" + value,
          onComplete: showResult,
          onFailure: showAlert

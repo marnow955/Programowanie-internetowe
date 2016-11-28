@@ -7,7 +7,11 @@
   }
   else
   {
-    $search = $_POST['login'];
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+      $search = $_POST['login'];
+    } else if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+      $search = $_GET['login'];
+    }
     $zapytanie = "SELECT * FROM uzytkownicy WHERE login='$search'";
     $wynik = $polaczenie->query($zapytanie);
     $ile_znalezionych = $wynik->num_rows;

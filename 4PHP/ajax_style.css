@@ -10,7 +10,6 @@ form input[type=text]
   padding: 10px;
   box-sizing: border-box;
   outline: none;
-  margin-top: 10px;
 }
 
 #searchSuggest
@@ -61,4 +60,36 @@ table tr td:first-child
   top: 360px;
   background-color: green;
   position: absolute;
+}
+
+.buttons:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+label
+{
+  width: 24%;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 7px;
+  background-color: #555;
+  text-align: center;
+  cursor: pointer;
+}
+
+label:hover
+{
+  background-color: #444;
+}
+
+input[type=radio]
+{
+  display: none;
+}
+
+input[type=radio]:checked ~ label
+{
+  background-color: #333;
 }

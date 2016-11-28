@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>gmap_code.html</title>
+
+    <script type="text/javascript" src="../js/shCore.js"></script>
+    <script type="text/javascript" src="../js/shBrushXml.js"></script>
+    <link href="../css/shCoreRDark.css" rel="stylesheet" type="text/css" />
+    <link href="../css/shThemeRDark.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+     SyntaxHighlighter.all()
+     </script>
+  </head>
+  <body style="margin:0;">
+    <script type="syntaxhighlighter" class="brush: html"><![CDATA[
+  /**
+   * SyntaxHighlighter
+   */
+   <!DOCTYPE html>
+   <html lang="pl">
+     <head>
+       <meta charset="utf-8" />
+       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+       <title>Google Map API</title>
+       <meta name="author" content="Marek Noworolnik"/>
+       <meta name="description" content="Programowanie internetowe - mapa google" />
+       <meta name="keywords" content="Programowanie internetowe, www, Marek Noworolnik, google, map, api" />
+
+       <meta name="viewport" content="initial-scale=1.0">
+
+       <link rel="stylesheet" href="../masterCSS.css" type="text/css" />
+       <link rel="stylesheet" href="gmap_style.css" type="text/css" />
+
+       <!-- <script src="https://www.google.com/jsapi"></script> -->
+     </head>
+     <body>
+       <!-- ########################### W3C Standard #################################### -->
+       <p>
+         <a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fiem.pw.edu.pl%2F~noworolm%2F5GAPI%2Fgmap.html">
+           <img class="html5valid" src="../HTML5_Logo_32.png" alt="Poprawny HTML!" />
+         </a>
+       </p>
+       <p>
+         <a href="http://jigsaw.w3.org/css-validator/check/referer">
+           <img class="css3valid" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Poprawny CSS!" />
+         </a>
+       </p>
+
+       <div class="container">
+         <div class="logo">
+           Google Map
+         </div>
+
+         <div class="leftPanel">
+           <input type="text" id="start-input" placeholder="start..." />
+           <input type="text" id="end-input" placeholder="cel..." />
+           <input type="text" id="wayp1" name="waypoints[]" placeholder="przez..." />
+           <input type="text" id="wayp2" name="waypoints[]" placeholder="przez..." />
+           <input type="text" id="wayp3" name="waypoints[]" placeholder="przez..." />
+           <input type="text" id="wayp4" name="waypoints[]" placeholder="przez..." />
+           <input type="text" id="wayp5" name="waypoints[]" placeholder="przez..." />
+           Tryb podróży:
+           <select id="mode">
+             <option value="DRIVING">Samochodem</option>
+             <option value="WALKING">Pieszo</option>
+             <option value="BICYCLING">Rowerem</option>
+             <option value="TRANSIT">Transportem publicznym</option>
+           </select>
+
+           <input type="submit" id="submit" value="Nawiguj" />
+         </div>
+         <div class="content">
+           <div id="map"></div>
+           <div id="elevation_chart"></div>
+         </div>
+         <div class="rightPanel" id="rightPanel">
+           <div id="total"></div>
+           <div id="directionsPanel"></div>
+         </div>
+         <div style="clear:both;"></div>
+
+         <!-- <script type="text/javascript" src="map.js" ></script>
+         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCy5tPr_h8y6o9eRhO_ARcgX4A7HexcvtA&libraries=places&callback=initMap" async defer></script> -->
+
+         <div class="footer">
+           Linki do źródeł:
+           <a href="gmap_code.html">gmap.html</a>
+           <a href="map_code.html">map.js</a>
+           <a href="../masterCSS_code.html">masterCSS.css</a>
+           <a href="gmap_style_code.html">gmap_style.css</a>
+         </div>
+       </div>
+
+     </body>
+   </html>
+
+
+]]></script>
+  </body>
+</html>

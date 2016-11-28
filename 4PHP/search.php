@@ -7,7 +7,11 @@
   }
   else
   {
-    $search = $_POST['search'];
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+      $search = $_POST['search'];
+    } else if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+      $search = $_GET['search'];
+    }
     $zapytanie = "SELECT login FROM uzytkownicy WHERE login LIKE '%$search%' LIMIT 10";
     $wynik = $polaczenie->query($zapytanie);
     $ile_znalezionych = $wynik->num_rows;

@@ -42,9 +42,28 @@
        <div class="container">
          <div class="content">
 
+           <div class="buttons">
+             <span>
+               <input type="radio" name="method" value="get" id="get" />
+               <label for="get">GET</label>
+             </span>
+             <span>
+               <input type="radio" name="method" value="post" id="post" />
+               <label for="post">POST</label>
+             </span>
+             <span>
+               <input type="radio" name="method" value="aget" id="aget" />
+               <label for="aget">AJAX+GET</label>
+             </span>
+             <span>
+               <input type="radio" name="method" value="apost" id="apost" checked />
+               <label for="apost">AJAX+POST</label>
+             </span>
+           </div>
+
            <form autocomplete="off" action="" method="post">
              <input autocomplete="false" name="hidden" type="text" style="display:none;">
-             <input type="text" id="searchinput" name="searchinput" placeholder="Wyszukaj..." onkeyup="suggest()" />
+             <input type="text" id="searchinput" name="searchinput" placeholder="Wyszukaj..." onkeyup="selectSuggest()" />
 
              <div id="searchSuggest">
              </div>
@@ -53,9 +72,6 @@
            <div id="result">
            </div>
 
-           <p>
-             Problemy z SQL, działająca wersja: <a href="http://marnow955-test.ugu.pl/4PHP/ajax.php">http://marnow955-test.ugu.pl/4PHP/ajax.php</a>
-           </p>
 
            <div id="frame">
            </div>
