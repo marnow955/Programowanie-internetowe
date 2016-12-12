@@ -219,6 +219,7 @@ function autocomplete(id) {
     setInfoWindow(id,place.formatted_address);
 
     calculateBounds();
+    setTimeout(recalculateRoute, 150);
   });
   return marker;
 }
@@ -276,7 +277,7 @@ function geocodeLatLng(latlng, id) {
   });
 }
 
-function getTotalDistance(directionsDisplay) {
+function getTotalDistance() {
   var legs = directionsDisplay.getDirections().routes[0].legs;
   var total = 0;
   for (var i = 0; i < legs.length; i++) {
@@ -285,7 +286,7 @@ function getTotalDistance(directionsDisplay) {
   return total;
 }
 
-function getTotalDuration(directionsDisplay) {
+function getTotalDuration() {
   var legs = directionsDisplay.getDirections().routes[0].legs;
   var total = 0;
   for (var i = 0; i < legs.length; i++) {
@@ -294,9 +295,9 @@ function getTotalDuration(directionsDisplay) {
   return total;
 }
 
-function showTotal(directionsDisplay) {
-  var totatDistance = getTotalDistance(directionsDisplay)/1000;
-  var totalDuration = getTotalDuration(directionsDisplay);
+function showTotal() {
+  var totatDistance = getTotalDistance()/1000;
+  var totalDuration = getTotalDuration();
   var htime = Math.floor(totalDuration/3600);
   var mtime = Math.round(((totalDuration/3600)-htime)*60);
   document.getElementById('total').innerHTML = totatDistance+" km. Około "+htime+" godz. "+mtime+" min";
@@ -326,7 +327,7 @@ function calculateAndDisplayRoute() {
       directionsDisplay.setDirections(response);
       isRouteDisplay = true;
       inputUpdate(directionsDisplay.getDirections());
-      showTotal(directionsDisplay);
+      showTotal();
       var bounds = directionsDisplay.getDirections().routes[0].bounds;
       newCenter(bounds.getCenter(),bounds);
 
@@ -342,7 +343,7 @@ function calculateAndDisplayRoute() {
 
         inputUpdate(directions);
 
-        showTotal(directionsDisplay);
+        showTotal();
         var bounds = directions.routes[0].bounds;
         newCenter(bounds.getCenter(),bounds);
 
